@@ -56,7 +56,7 @@ html, body {
 
 /* Set hover colour */
 .main-nav li:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Make links inline blocks and pad */
@@ -72,7 +72,7 @@ html, body {
 }
 
 @media only screen and (max-width: 720px) {
-    .main-nav ul {background-color: rgba(40, 100, 100, 1);}
+    .main-nav ul {background-color: rgba(26, 115, 28, 1);}
 }
 
 /* ----------------------------------------------------
@@ -468,7 +468,7 @@ html, body {
    ----------------------------------------------------*/
 .footer {
     height: 50px;
-    background-color: rgba(40, 100, 100, 1);
+    background-color: rgba(26, 115, 28, 1);
     text-align: center;
     color: white;
 }
