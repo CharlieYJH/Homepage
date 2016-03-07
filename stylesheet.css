@@ -618,7 +618,7 @@ html, body {
 }
 
 #level-1 .left-img .image {
-    background-image: url("./images/Sky.jpg");
+    background-image: url("./images/Alt.jpg");
 }
 
 #level-1 .mid-img .image {
@@ -645,10 +645,11 @@ html, body {
 
 .img-big-container {
     position: relative;
-    width: 60%;
-    height: 60%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+}
+
+.img-big-container img {
+    display: block;
 }
