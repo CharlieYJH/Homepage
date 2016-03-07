@@ -494,3 +494,7 @@ html, body {
     color: white;
     text-decoration: none;
 }
+
+#footer-links li > a:hover {
+    text-decoration: underline;
+}
