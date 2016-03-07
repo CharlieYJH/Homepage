@@ -242,7 +242,9 @@
     });
     
     $(document).ready(function() {
-        $(".container").addClass("container-loaded");
+        $(window).on("load", function() {
+            $(".container").addClass("container-loaded");
+        });
     });
     
 </script>

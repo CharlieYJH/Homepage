@@ -26,7 +26,7 @@
         <li><a onclick="scrollToElement('body', 500)">Home</a>
         <li><a onclick="scrollToElement('#content-1', 500)">About Me</a>
         <li><a href="gallery.html">Gallery</a>
-        <li><a href="my-page.html#content-3">Channel</a>
+        <li><a onclick="scrollToElement('#content-3', 500)">Channel</a>
         <li><a href="https://github.com/CharlieYJH">GitHub</a>
       </ul>
     </nav>
@@ -232,7 +232,9 @@
     }
     
     $(document).ready(function() {
-        $(".container").addClass("container-loaded");
+        $(window).on("load", function() {
+            $(".container").addClass("container-loaded");
+        });
     });
     
 </script>
