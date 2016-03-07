@@ -22,6 +22,8 @@
     </nav>
 </div>
 
+<div class="img-display" hidden></div>
+
 <div class="section group subpage-heading">
 	<div class="col span_12_of_12 subpage-banner">
         <div class="color-fill"></div>
@@ -41,26 +43,84 @@
 	<div class="col span_12_of_12"></div>
 </div>
 
-<div class="section group gallery-container">
+<div class="section group gallery-container" id="level-1">
     <div class="img-row">
         <div class="left-img">
             <div class="image"></div>
             <div class="image-name-container">
-                <span class="image-name">Name</span>
+                <span class="image-name">Name1</span>
             </div>
         </div>
         <div class="midleft-spacing"></div>
         <div class="mid-img">
             <div class="image"></div>
             <div class="image-name-container">
-                <span class="image-name">Name</span>
+                <span class="image-name">Name2</span>
             </div>
         </div>
         <div class="midright-spacing"></div>
         <div class="right-img">
             <div class="image"></div>
             <div class="image-name-container">
-                <span class="image-name">Name</span>
+                <span class="image-name">Name3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section group horizontal-spacing">
+	<div class="col span_12_of_12"></div>
+</div>
+
+<div class="section group gallery-container" id="level-2">
+    <div class="img-row">
+        <div class="left-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name1</span>
+            </div>
+        </div>
+        <div class="midleft-spacing"></div>
+        <div class="mid-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name2</span>
+            </div>
+        </div>
+        <div class="midright-spacing"></div>
+        <div class="right-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section group horizontal-spacing" id="level-3">
+	<div class="col span_12_of_12"></div>
+</div>
+
+<div class="section group gallery-container">
+    <div class="img-row">
+        <div class="left-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name1</span>
+            </div>
+        </div>
+        <div class="midleft-spacing"></div>
+        <div class="mid-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name2</span>
+            </div>
+        </div>
+        <div class="midright-spacing"></div>
+        <div class="right-img">
+            <div class="image"></div>
+            <div class="image-name-container">
+                <span class="image-name">Name3</span>
             </div>
         </div>
     </div>
@@ -164,6 +224,18 @@
         if (scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(178, 42, 42, 1)");
         }
+    });
+    
+    $(document).ready(function() {
+        $(window).click(function() {
+            var attribute = $(".img-display").attr("hidden");
+            if (attribute !== undefined) {
+                $(".img-display").removeAttr("hidden");
+            }
+            else {
+                $(".img-display").attr("hidden", "true");
+            }
+        });
     });
 </script>
 </body>
