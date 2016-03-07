@@ -27,7 +27,7 @@ html, body {
 }
 
 /* To view layout */
-/* {box-shadow: inset 1px 1px 1px 1px;}
+* {box-shadow: inset 1px 1px 1px 1px;}
 
 /* ----------------------------------------------------
    Main navigation
@@ -498,4 +498,54 @@ html, body {
 
 #footer-links li > a:hover {
     text-decoration: underline;
+}
+
+/* ===============================================================================================================================================================================
+
+    Gallery
+    
+    ===============================================================================================================================================================================*/
+    
+/* ----------------------------------------------------
+   Page heading
+   ----------------------------------------------------*/
+    
+.subpage-banner {
+    position: relative;
+    width: 100%;
+    background-image: url("./images/content-2_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.subpage-banner:after {
+    content: "";
+    display: block;
+    padding-bottom: 15%;
+}
+
+#gallery .color-fill {
+    background-color: rgba(100, 40, 40, 0.5);
+}
+
+.subpage-title {
+    display: table;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    font-size: 48px;
+    font-family: "Helvetica", Arial, sans-serif;
+    color: white;
+    padding: 14px 16px;
+    border: 5px solid white;
+}
+
+@media only screen and (max-width: 1280px) {
+    .subpage-banner:after {padding-bottom: 25%;}
+}
+
+@media only screen and (max-width: 720px) {
+    .subpage-banner:after {padding-bottom: 28%;}
 }
