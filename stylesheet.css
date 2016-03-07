@@ -240,7 +240,8 @@ html, body {
 
 @media only screen and (max-width: 720px) {
 	.left-spacing, .midleft-spacing, .midright-spacing, .right-spacing {display: none;}
-    #left-icon, #mid-icon, #right-icon {width: 20%;}
+    .left-icon-container, .mid-icon-container, .right-icon-container {width: 33.33%;}
+    #left-icon, #mid-icon, #right-icon {width: 50%;}
 }
 
 /* ----------------------------------------------------
