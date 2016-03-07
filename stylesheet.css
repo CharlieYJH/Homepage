@@ -27,7 +27,7 @@ html, body {
 }
 
 /* To view layout */
-* {box-shadow: inset 1px 1px 1px 1px;}
+/* {box-shadow: inset 1px 1px 1px 1px;}
 
 /* ----------------------------------------------------
    Main navigation
@@ -372,6 +372,7 @@ html, body {
     font-size: 18px;
     font-family: "HelveticaNeueLT Std Thin", "Helvetica", Arial, sans-serif;
     letter-spacing: 2px;
+    padding-left: 2px;
     color: white;
 }
 
@@ -506,6 +507,12 @@ html, body {
     
     ===============================================================================================================================================================================*/
     
+/* To view layout */    
+/* #gallery * {box-shadow: inset 1px 1px 1px 1px;} */
+
+#gallery .main-nav ul {background-color: rgb(178, 42, 42);}
+#gallery .footer {background-color: rgb(178, 42, 42);}
+    
 /* ----------------------------------------------------
    Page heading
    ----------------------------------------------------*/
@@ -534,11 +541,12 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10%;
+    bottom: 25%;
     font-size: 48px;
     font-family: "Helvetica", Arial, sans-serif;
     color: white;
-    padding: 14px 16px;
+    letter-spacing: 20px;
+    padding-left: 20px;
     border: 5px solid white;
 }
 
@@ -548,4 +556,32 @@ html, body {
 
 @media only screen and (max-width: 720px) {
     .subpage-banner:after {padding-bottom: 28%;}
+}
+
+/* ----------------------------------------------------
+   Gallery
+   ----------------------------------------------------*/
+   
+.gallery-container div {
+    min-height: 2px;
+}
+
+.left-img-container, .mid-img-container, .right-img-container {
+    position: relative;
+}
+
+.left-img, .mid-img, .right-img {
+    width: 100%;
+    background-color: black;
+}
+
+.left-img:after, .mid-img:after, .right-img:after {
+    content:"";
+    display: block;
+    padding-bottom: 100%;
+}
+   
+@media only screen and (max-width: 720px) {
+    .left-img-container, .mid-img-container, .right-img-container {width: 32%}
+    .leftmid-spacing, .rightmid-spacing {width: 2%}
 }
