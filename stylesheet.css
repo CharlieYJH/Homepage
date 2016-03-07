@@ -581,21 +581,29 @@ html, body {
 }
 
 .left-img, .mid-img, .right-img {
+    position: relative;
     display: inline-block;
     width: 25%;
-    left: 50%;
     background-color: black;
-}
-
-.left-img:after, .mid-img:after, .right-img:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
 }
 
 .midleft-spacing, .midright-spacing {
     display: inline-block;
     width: 2.5%;
+}
+
+.image {
+    width: 100%;
+}
+
+.image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.image-name {
+    width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
