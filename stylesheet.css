@@ -611,6 +611,13 @@ html, body {
     background-color: yellow;
 }
 
+#level-1 .left-img .image {
+    background-image: url("./images/Sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 @media only screen and (max-width: 1280px) {
     .img-row {width: 100%;}
 }
@@ -624,5 +631,17 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10;
+    z-index: -1;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.img-big-container {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
 }

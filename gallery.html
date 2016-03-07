@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="grid.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="gallery_animation.js"></script>
 </head>
 <body id="gallery">
 
@@ -22,7 +23,9 @@
     </nav>
 </div>
 
-<div class="img-display" hidden></div>
+<div class="img-display">
+    <div class="img-big-container"></div>
+</div>
 
 <div class="section group subpage-heading">
 	<div class="col span_12_of_12 subpage-banner">
@@ -224,20 +227,6 @@
         if (scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(178, 42, 42, 1)");
         }
-    });
-    
-    $(document).ready(function() {
-        $(".img-box").click(function() {
-            if ($(".img-display").attr("hidden") !== undefined) {
-                $(".img-display").delay(1000).removeAttr("hidden");
-            }
-        });
-    });
-    
-    $(document).ready(function() {
-        $(".img-display").click(function() {
-            $(".img-display").attr("hidden", "true");
-        });
     });
 </script>
 </body>
