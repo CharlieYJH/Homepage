@@ -584,7 +584,6 @@ html, body {
     position: relative;
     display: inline-block;
     width: 25%;
-    background-color: black;
 }
 
 .midleft-spacing, .midright-spacing {
@@ -594,6 +593,7 @@ html, body {
 
 .image {
     width: 100%;
+    background-color: black;
 }
 
 .image:after {
@@ -602,8 +602,9 @@ html, body {
     padding-bottom: 100%;
 }
 
-.image-name {
+.image-name-container {
     width: 100%;
+    background-color: yellow;
 }
 
 @media only screen and (max-width: 1280px) {
