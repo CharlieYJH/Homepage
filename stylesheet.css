@@ -626,11 +626,39 @@ html, body {
 }
 
 #level-1 .left-img .image {
-    background-image: url("./images/Sky.jpg");
+    background-image: url("./gallery/01.png");
 }
 
 #level-1 .mid-img .image {
-    background-image: url("./images/Profile.png");
+    background-image: url("./gallery/02.png");
+}
+
+#level-1 .right-img .image {
+    background-image: url("./gallery/03.png");
+}
+
+#level-2 .left-img .image {
+    background-image: url("./gallery/04.png");
+}
+
+#level-2 .mid-img .image {
+    background-image: url("./gallery/05.png");
+}
+
+#level-2 .right-img .image {
+    background-image: url("./gallery/06.png");
+}
+
+#level-3 .left-img .image {
+    background-image: url("./gallery/07.png");
+}
+
+#level-3 .mid-img .image {
+    background-image: url("./gallery/08.png");
+}
+
+#level-3 .right-img .image {
+    background-image: url("./gallery/09.png");
 }
 
 @media only screen and (max-width: 1280px) {
