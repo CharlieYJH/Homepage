@@ -472,3 +472,7 @@ html, body {
     text-align: center;
     color: white;
 }
+
+#footer-links li {
+    display: inline-block;
+}
