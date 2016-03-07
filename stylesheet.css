@@ -589,7 +589,7 @@ html, body {
     cursor: pointer
 }
 
-.midleft-spacing, .midright-spacing {
+#gallery .midleft-spacing, #gallery .midright-spacing {
     display: inline-block;
     width: 2.5%;
 }

@@ -7,9 +7,19 @@
   <link rel="stylesheet" type="text/css" href="grid.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <style>
+    .container {
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    .container-loaded {
+        opacity: 1;
+    }
+  </style>
 </head>
-<body>
 
+<body class="container">
 <div class="section group main-nav" id="navbar">
     <nav class="col span_12_of_12">
       <ul>
@@ -91,7 +101,7 @@
     <div class="col span_10_of_12 content">
         <div class="content-header">ART</div>
         <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
-        <a href="#" class="button">View Gallery</a>
+        <a href="gallery.html" class="button">View Gallery</a>
     </div>
 	<div class="col span_1_of_12 right-spacing"></div>
 </div>
@@ -218,6 +228,11 @@
         var navbarHeight = $("nav").height();
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
+    
+    $(document).ready(function() {
+        $(".container").addClass("container-loaded");
+    });
+    
 </script>
 </body>
 </html>
