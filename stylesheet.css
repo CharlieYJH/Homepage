@@ -483,7 +483,6 @@ html, body {
 #footer-links {
     padding: 0;
     margin: 0;
-    background-color: none;
 }
 
 #footer-links li {
@@ -598,6 +597,7 @@ html, body {
 .image {
     width: 100%;
     background-color: black;
+    transition: 0.3s;
 }
 
 .image:after {
@@ -606,9 +606,17 @@ html, body {
     padding-bottom: 100%;
 }
 
+.image:hover {
+    opacity: 0.7;
+}
+
 .image-name-container {
     width: 100%;
-    background-color: yellow;
+    font-size: 18px;
+    font-family: "HelveticaNeueLT Std Thin", "Helvetica", Arial, sans-serif;
+    letter-spacing: 10px;
+    padding-left: 10px;
+    display: none;
 }
 
 .image {
@@ -618,7 +626,7 @@ html, body {
 }
 
 #level-1 .left-img .image {
-    background-image: url("./images/Alt.jpg");
+    background-image: url("./images/Sky.jpg");
 }
 
 #level-1 .mid-img .image {
@@ -641,6 +649,10 @@ html, body {
     z-index: -1;
     transition: 0.3s;
     opacity: 0;
+}
+
+.img-display {
+    cursor: pointer;
 }
 
 .img-big-container {
