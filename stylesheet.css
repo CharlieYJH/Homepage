@@ -611,11 +611,18 @@ html, body {
     background-color: yellow;
 }
 
-#level-1 .left-img .image {
-    background-image: url("./images/Sky.jpg");
+.image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+#level-1 .left-img .image {
+    background-image: url("./images/Sky.jpg");
+}
+
+#level-1 .mid-img .image {
+    background-image: url("./images/Profile.png");
 }
 
 @media only screen and (max-width: 1280px) {
