@@ -510,7 +510,10 @@ html, body {
 /* To view layout */    
 /* #gallery * {box-shadow: inset 1px 1px 1px 1px;} */
 
-#gallery .main-nav ul {background-color: rgb(178, 42, 42);}
+@media only screen and (max-width: 720px) {
+    #gallery .main-nav ul {background-color: rgb(178, 42, 42);}
+}
+
 #gallery .footer {background-color: rgb(178, 42, 42);}
     
 /* ----------------------------------------------------
@@ -562,26 +565,39 @@ html, body {
    Gallery
    ----------------------------------------------------*/
    
+.gallery-container {
+    position: relative;
+}
+   
 .gallery-container div {
     min-height: 2px;
 }
 
-.left-img-container, .mid-img-container, .right-img-container {
+.img-row {
     position: relative;
+    width: 70em;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .left-img, .mid-img, .right-img {
-    width: 100%;
+    display: inline-block;
+    width: 25%;
+    left: 50%;
     background-color: black;
 }
 
 .left-img:after, .mid-img:after, .right-img:after {
-    content:"";
+    content: "";
     display: block;
     padding-bottom: 100%;
 }
-   
-@media only screen and (max-width: 720px) {
-    .left-img-container, .mid-img-container, .right-img-container {width: 32%}
-    .leftmid-spacing, .rightmid-spacing {width: 2%}
+
+.midleft-spacing, .midright-spacing {
+    display: inline-block;
+    width: 2.5%;
+}
+
+@media only screen and (max-width: 1280px) {
+    .img-row {width: 100%;}
 }

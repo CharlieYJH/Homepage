@@ -42,19 +42,22 @@
 </div>
 
 <div class="section group gallery-container">
+<!--
 	<div class="col span_2_of_12 left-spacing"></div>
-    <div class="col span_2_of_12 left-img-container">
+    <div class="col span_8_of_12 left-img-container">
+        <div class="left-img">Left-img</div>
+        <div class="left-img">Left-img</div>
         <div class="left-img">Left-img</div>
     </div>
-    <div class="col span_1_of_12 leftmid-spacing"></div>
-    <div class="col span_2_of_12 mid-img-container">
-        <div class="mid-img">Mid-img</div>
-    </div>
-    <div class="col span_1_of_12 rightmid-spacing"></div>
-    <div class="col span_2_of_12 right-img-container">
-        <div class="mid-img">Right-img</div>
-    </div>
 	<div class="col span_2_of_12 right-spacing"></div>
+-->
+    <div class="img-row">
+        <div class="left-img">Left-img</div>
+        <div class="midleft-spacing"></div>
+        <div class="mid-img">Mid-img</div>
+        <div class="midright-spacing"></div>
+        <div class="right-img">Right-img</div>
+    </div>
 </div>
 
 <div class="section group footer">
@@ -137,7 +140,7 @@
             $(document).scroll(function() {
                 var scroll = $(this).scrollTop();
                 if (scroll > 0) {
-                    $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
+                    $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
                 }
                 else {
                     $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
@@ -149,7 +152,7 @@
     $(document).ready(function() {
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
-            $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
+            $("#navbar").find("ul").css("background-color", "rgba(178, 42, 42, 1)");
         }
     });
 </script>
