@@ -467,7 +467,8 @@ html, body {
    Footer
    ----------------------------------------------------*/
 .footer {
-    background-color: black;
+    height: 50px;
+    background-color: rgba(40, 100, 100, 1);
     text-align: center;
     color: white;
 }
