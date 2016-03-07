@@ -651,17 +651,41 @@ html, body {
     opacity: 0;
 }
 
-.img-display {
-    cursor: pointer;
-}
-
 .img-big-container {
     position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .img-big-container img {
+    position: relative;
     display: block;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#img-name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 18px;
+    font-family: "HelveticaNeueLT Std Thin", "Helvetica", Arial, sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+#img-name:after {
+    content: "";
+    display: block;
+    padding-bottom: 2.5%;
+}
+
+#img-name span {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translateY(-50%);
 }
