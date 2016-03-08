@@ -37,29 +37,16 @@ var getImage = function(element) {
 var showImage = function(img) {
     var imgContainer = $(".img-big-container");
     var imgDiv = $(".img-big-container").find("img");
+    var scale = 1;
     
     imgContainer.css({"width": "", "height": "", "max-width": "", "max-height": ""});
     imgDiv.removeAttr("src");
     
-    if (img.width > img.height) {
-        if (img.width < $("body").width() * 0.6)
-            imgContainer.css({"width": img.width});
-        else {
-            imgContainer.css({"width": "60%"});
-        }
-        imgDiv.attr("src", img.src);
-        imgDiv.css("max-width", "100%");
-        imgContainer.css("height", imgDiv.height());
+    while(scale * img.height > 0.95 * $("body").height() || scale * img.width > 0.95 * $("body").width()) {
+        scale -= 0.05;
     }
-    
-    else {
-        if (img.height < $("body").height() * 0.9)
-            imgContainer.css({"height": img.height});
-        else {
-            imgContainer.css({"height": "90%"});
-        }
-        imgDiv.attr("src", img.src);
-        imgDiv.css("max-height", "100%");
-        imgContainer.css("width", imgDiv.width());
-    }
+
+    imgContainer.css({"height": scale * img.height, "width": scale * img.width});
+    imgDiv.attr("src", img.src);
+    imgDiv.css("max-width", "100%");
 }
