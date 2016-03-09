@@ -625,7 +625,7 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
-    .gallery-section {width: 100%;}
+    #gallery-section {width: 100%;}
 }
 
 /* ----------------------------------------------------
