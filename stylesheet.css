@@ -624,10 +624,6 @@ body {
     background-position: center center;
 }
 
-#gallery-container .image {
-    background-image: url("./gallery/01.png");
-}
-
 @media only screen and (max-width: 1280px) {
     .gallery-section {width: 100%;}
 }
