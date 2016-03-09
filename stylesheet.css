@@ -571,21 +571,21 @@ body {
    Gallery
    ----------------------------------------------------*/
    
-.gallery-container {
+#gallery-container {
     position: relative;
 }
    
-.gallery-container div {
+#gallery-container div {
     min-height: 2px;
 }
 
-.gallery-section {
+#gallery-section {
     position: relative;
     width: 65%;
     margin: 0 auto;
 }
 
-.img-section {
+#img-section {
     position: relative;
     display: table;
     width: 100%;
@@ -624,7 +624,7 @@ body {
     background-position: center center;
 }
 
-#level-1 .image {
+#gallery-container .image {
     background-image: url("./gallery/01.png");
 }
 
