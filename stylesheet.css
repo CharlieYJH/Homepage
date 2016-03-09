@@ -583,7 +583,6 @@ body {
     position: relative;
     width: 65%;
     margin: 0 auto;
-    text-align: center;
 }
 
 .img-section {
@@ -599,12 +598,13 @@ body {
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 25%;
+    width: 30%;
 }
 
 .image {
     width: 100%;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .image:after {
@@ -628,7 +628,7 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
-    .img-row {width: 100%;}
+    .gallery-section {width: 100%;}
 }
 
 /* ----------------------------------------------------
