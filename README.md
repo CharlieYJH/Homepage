@@ -2,5 +2,5 @@
 My personal homepage
 
 # Pages currently consist of:
-  my-page.html\n
-  gallery.html
+1. my-page.html
+2. gallery.html
