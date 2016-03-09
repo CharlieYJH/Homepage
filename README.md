@@ -7,4 +7,3 @@ My personal homepage
 
 #### Screenshots:
 
-index.html:
