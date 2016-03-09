@@ -6,5 +6,5 @@ My personal homepage
 2. gallery.html
 
 #### Screenshots:
-![Index](/screenshots/index.png)
-![Gallery](/screenshots/gallery.png)
+![Index](/screenshots/index.png "Index")
+![Gallery](/screenshots/gallery.png "Gallery")
