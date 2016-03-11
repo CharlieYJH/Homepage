@@ -597,6 +597,7 @@ body {
 .img-box {
     position: relative;
     display: inline-block;
+    vertical-align: bottom;
     margin: 1%;
     padding: 0;
     width: 23%;
