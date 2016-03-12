@@ -20,190 +20,136 @@
 </head>
 
 <body class="container">
-<div class="section group main-nav" id="navbar">
-    <nav class="col span_12_of_12">
-      <ul>
-        <li><a onclick="scrollToElement('body', 500)">Home</a>
-        <li><a onclick="scrollToElement('#content-1', 500)">About Me</a>
-        <li><a href="gallery.html">Gallery</a>
-        <li><a onclick="scrollToElement('#content-3', 500)">Channel</a>
-        <li><a href="https://github.com/CharlieYJH">GitHub</a>
-      </ul>
-    </nav>
-</div>
+<div class="wrapper">
+    <div class="section group main-nav" id="navbar">
+        <nav class="col span_12_of_12">
+          <ul>
+            <li><a onclick="scrollToElement('body', 500)">Home</a>
+            <li><a onclick="scrollToElement('#content-1', 500)">About Me</a>
+            <li><a href="gallery.html">Gallery</a>
+            <li><a onclick="scrollToElement('#content-3', 500)">Channel</a>
+            <li><a href="https://github.com/CharlieYJH">GitHub</a>
+          </ul>
+        </nav>
+    </div>
 
-<div class="section group banner">
-	<div class="col span_12_of_12">
+    <div class="section group banner">
+        <div class="col span_12_of_12">
+            <div class="color-fill"></div>
+            <span id="title">
+                CHARLIE YIN
+                <br><span id="subtitle">A cool phrase here</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group main">
+        <div class="col span_2_of_12 left-spacing"></div>
+        <div class="col span_2_of_12 left-icon-container" onclick="scrollToElement('#content-2', 500)">
+            <div id="left-icon"></div>
+            <a id="left-title">ART</a>
+        </div>
+        <div class="col span_1_of_12 midleft-spacing"></div>
+        <div class="col span_2_of_12 mid-icon-container" onclick="scrollToElement('#content-3', 500)">
+            <div id="mid-icon"></div>
+            <a id="mid-title">MUSIC</a>
+        </div>
+        <div class="col span_1_of_12 midright-spacing"></div>
+        <div class="col span_2_of_12 right-icon-container" onclick="scrollToElement('#content-4', 500)">
+            <div id="right-icon"></div>
+            <a id="right-title">CODE</a>
+        </div>
+        <div class="col span_2_of_12 right-spacing"></div>
+    </div>
+
+    <div id="before-section">
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+    </div>
+
+    <div class="section group content-wrapper" id="content-1">
+        <div class="col span_1_of_12 left-spacing"></div>
+        <div class="col span_10_of_12 content">
+            <div class="left-content">
+                <span id="intro-header">ABOUT ME</span>
+                <p id="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ante a leo aliquam tristique. Nulla ex libero, luctus sed arcu sed, ullamcorper vestibulum elit. Curabitur nec elit vitae ex suscipit sagittis. Praesent sit amet volutpat risus. Donec eget tortor non mauris vehicula efficitur. Donec auctor pharetra volutpat. Morbi eget imperdiet dolor. Aliquam pretium, ipsum ut dapibus molestie, dolor est tincidunt purus, a suscipit dui libero in odio. Integer at nisl et ligula cursus dapibus. Nullam hendrerit cursus nisi at rhoncus. Vestibulum sit amet leo vitae leo commodo tristique convallis nec arcu.</p>
+            </div>
+            <div class="right-content">
+                <div class="img-container"></div>
+            </div>
+        </div>
+        <div class="col span_1_of_12 right-spacing"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group content-wrapper" id="content-2">
+        <div class="col span_1_of_12 left-spacing"></div>
         <div class="color-fill"></div>
-        <span id="title">
-            CHARLIE YIN
-            <br><span id="subtitle">A cool phrase here</span>
-        </span>
-    </div>
-</div>
-
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
-
-<div class="section group main">
-	<div class="col span_2_of_12 left-spacing"></div>
-	<div class="col span_2_of_12 left-icon-container" onclick="scrollToElement('#content-2', 500)">
-        <div id="left-icon"></div>
-        <a id="left-title">ART</a>
-    </div>
-	<div class="col span_1_of_12 midleft-spacing"></div>
-	<div class="col span_2_of_12 mid-icon-container" onclick="scrollToElement('#content-3', 500)">
-        <div id="mid-icon"></div>
-        <a id="mid-title">MUSIC</a>
-    </div>
-	<div class="col span_1_of_12 midright-spacing"></div>
-	<div class="col span_2_of_12 right-icon-container" onclick="scrollToElement('#content-4', 500)">
-        <div id="right-icon"></div>
-        <a id="right-title">CODE</a>
-    </div>
-	<div class="col span_2_of_12 right-spacing"></div>
-</div>
-
-<div id="before-section">
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
-
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
-</div>
-
-<div class="section group content-wrapper" id="content-1">
-	<div class="col span_1_of_12 left-spacing"></div>
-    <div class="col span_10_of_12 content">
-        <div class="left-content">
-            <span id="intro-header">ABOUT ME</span>
-            <p id="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ante a leo aliquam tristique. Nulla ex libero, luctus sed arcu sed, ullamcorper vestibulum elit. Curabitur nec elit vitae ex suscipit sagittis. Praesent sit amet volutpat risus. Donec eget tortor non mauris vehicula efficitur. Donec auctor pharetra volutpat. Morbi eget imperdiet dolor. Aliquam pretium, ipsum ut dapibus molestie, dolor est tincidunt purus, a suscipit dui libero in odio. Integer at nisl et ligula cursus dapibus. Nullam hendrerit cursus nisi at rhoncus. Vestibulum sit amet leo vitae leo commodo tristique convallis nec arcu.</p>
+        <div class="col span_10_of_12 content">
+            <div class="content-header">ART</div>
+            <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
+            <a href="gallery.html" class="button">View Gallery</a>
         </div>
-        <div class="right-content">
-            <div class="img-container"></div>
+        <div class="col span_1_of_12 right-spacing"></div>
+    </div>
+
+    <div class="section group content-wrapper" id="content-3">
+        <div class="col span_1_of_12 left-spacing"></div>
+        <div class="color-fill"></div>
+        <div class="col span_10_of_12 content">
+            <div class="content-header">MUSIC</div>
+            <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
+            <a href="#" class="button">View Channel</a>
+        </div>
+        <div class="col span_1_of_12 right-spacing"></div>
+    </div>
+
+    <div class="section group content-wrapper" id="content-4">
+        <div class="col span_1_of_12 left-spacing"></div>
+        <div class="color-fill"></div>
+        <div class="col span_10_of_12 content">
+            <div class="content-header">CODE</div>
+            <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
+            <a href="https://github.com/CharlieYJH" target="_blank" class="button">View GitHub</a>
+        </div>
+        <div class="col span_1_of_12 right-spacing"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group footer">
+        <div class="col span_12_of_12" id="footer-container">
+            <ul id="footer-links">
+                <li><a href="#">Contact Me</a>
+                <li><a href="#">Facebook</a>
+                <li><a href="#">YouTube</a>
+                <li><a href="#">GitHub</a>
+            </ul>
         </div>
     </div>
-	<div class="col span_1_of_12 right-spacing"></div>
 </div>
-
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
-
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
-
-<div class="section group content-wrapper" id="content-2">
-	<div class="col span_1_of_12 left-spacing"></div>
-    <div class="color-fill"></div>
-    <div class="col span_10_of_12 content">
-        <div class="content-header">ART</div>
-        <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
-        <a href="gallery.html" class="button">View Gallery</a>
-    </div>
-	<div class="col span_1_of_12 right-spacing"></div>
-</div>
-
-<div class="section group content-wrapper" id="content-3">
-	<div class="col span_1_of_12 left-spacing"></div>
-    <div class="color-fill"></div>
-    <div class="col span_10_of_12 content">
-        <div class="content-header">MUSIC</div>
-        <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
-        <a href="#" class="button">View Channel</a>
-    </div>
-	<div class="col span_1_of_12 right-spacing"></div>
-</div>
-
-<div class="section group content-wrapper" id="content-4">
-	<div class="col span_1_of_12 left-spacing"></div>
-    <div class="color-fill"></div>
-    <div class="col span_10_of_12 content">
-        <div class="content-header">CODE</div>
-        <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat, ipsum ut pellentesque mollis, nisi est malesuada mauris, venenatis maximus felis leo et ante.</div>
-        <a href="https://github.com/CharlieYJH" target="_blank" class="button">View GitHub</a>
-    </div>
-	<div class="col span_1_of_12 right-spacing"></div>
-</div>
-
-<div class="section group footer">
-	<div class="col span_12_of_12" id="footer-container">
-        <ul id="footer-links">
-            <li><a href="#">Contact Me</a>
-            <li><a href="#">Facebook</a>
-            <li><a href="#">YouTube</a>
-            <li><a href="#">GitHub</a>
-        </ul>
-    </div>
-</div>
-
-<!-- Templating use
-<div class="section group content-wrapper" id="content-5">
-	<div class="col span_1_of_12 left-spacing">
-        Left-spacing
-    </div>
-    <div class="col span_10_of_12 content">
-        <div class="left-content">
-            Left-content
-        </div>
-        <div class="right-content">
-            Right-content
-        </div>
-    </div>
-	<div class="col span_1_of_12 right-spacing">
-        Right-spacing
-    </div>
-</div>
-
-<div class="section group horizontal-spacing">
-	<div class="col span_12_of_12"></div>
-</div>
--->
-
-<!-- Formatting
-<div class="section group">
-	<div class="col span_1_of_12">
-	This is column 1
-	</div>
-	<div class="col span_1_of_12">
-	This is column 2
-	</div>
-	<div class="col span_1_of_12">
-	This is column 3
-	</div>
-	<div class="col span_1_of_12">
-	This is column 4
-	</div>
-	<div class="col span_1_of_12">
-	This is column 5
-	</div>
-	<div class="col span_1_of_12">
-	This is column 6
-	</div>
-	<div class="col span_1_of_12">
-	This is column 7
-	</div>
-	<div class="col span_1_of_12">
-	This is column 8
-	</div>
-	<div class="col span_1_of_12">
-	This is column 9
-	</div>
-	<div class="col span_1_of_12">
-	This is column 10
-	</div>
-	<div class="col span_1_of_12">
-	This is column 11
-	</div>
-	<div class="col span_1_of_12">
-	This is column 12
-	</div>
-</div>
--->
 <script>
     $(document).ready(function() {
         if (!window.matchMedia("(max-width: 720px)").matches) {

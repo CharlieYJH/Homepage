@@ -11,6 +11,11 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
 ::-moz-selection {
     background: #8de1a9;
 }
@@ -139,7 +144,7 @@ body {
 }
 
 .horizontal-spacing {
-    height: 1.6em;
+    height: 25px;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -474,8 +479,10 @@ body {
    Footer
    ----------------------------------------------------*/
 .footer {
-    position: relative;
+    position: absolute;
+    width: 100%;
     height: 50px;
+    bottom: 0;
     background-color: rgba(26, 115, 28, 1);
     text-align: center;
 }
