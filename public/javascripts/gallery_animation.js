@@ -27,14 +27,6 @@ $(document).ready(function() {
     });
 });
 
-$(document).on("touchstart", function() {
-    $(".img-box .image").on("touchend", function() {
-        var img = getImage(".special");
-        $(".img-display").css({"opacity": "1", "z-index": "10"});
-        $("#navbar").css("opacity", "0");
-    });
-});
-
 var getImage = function(element) {
     var url = $(element).css("background-image");
     var img = new Image();
