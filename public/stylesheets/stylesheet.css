@@ -28,8 +28,10 @@ body {
 @font-face
 {
     font-family: "Helvetica";
-    src: url("../fonts/Helvetica.otf");
+    src: url("../fonts/Helvetica.otf"),
+         url("../fonts/Helvetica.eot");
 }
+
 @font-face
 {
     font-family: "HelveticaNeueLT Std Thin";
@@ -159,6 +161,7 @@ body {
     }
     
     #subtitle {display: none;}
+    .banner > div:after {padding-bottom: 30%;}
         
 }
 
@@ -632,6 +635,9 @@ body {
 .image {
     width: 100%;
     transition: 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     cursor: pointer;
 }
 
@@ -643,12 +649,6 @@ body {
 
 .image:hover {
     opacity: 0.7;
-}
-
-.image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -684,7 +684,6 @@ body {
     -moz-user-select: none;
     user-select: none;
 }
-
 
 /* {
   background: #000 !important;
