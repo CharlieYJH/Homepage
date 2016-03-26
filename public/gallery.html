@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="./javascripts/gallery_animation.js"></script>
+</head>
+  <style>
+    .container {
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    .container-loaded {
+        opacity: 1;
+    }
+  </style>
+<body class="container" id="gallery">
+<div class="wrapper">
+    <div class="section group main-nav" id="navbar">
+        <nav class="col span_12_of_12">
+          <ul>
+            <li><a href="index.html">Home</a>
+            <li><a href="index.html#before-section">About Me</a>
+            <li><a href="#">Gallery</a>
+            <li><a href="index.html#content-3">Channel</a>
+            <li><a href="https://github.com/CharlieYJH">GitHub</a>
+          </ul>
+        </nav>
+    </div>
+
+    <div class="img-display">
+        <div class="img-big-container">
+            <img></img>
+        </div>
+    </div>
+
+    <div class="section group subpage-heading">
+        <div class="col span_12_of_12 subpage-banner">
+            <div class="color-fill"></div>
+            <span class="subpage-title">GALLERY</span>
+        </div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group" id="gallery-container">
+        <div id="gallery-section">
+            <ul id="img-section">
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/01.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/02.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/03.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/04.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/05.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/06.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/07.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/08.png')"></div>
+                <li class="img-box"><div class="image" style="background-image: url('./images/gallery/09.png')"></div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group horizontal-spacing">
+        <div class="col span_12_of_12"></div>
+    </div>
+
+    <div class="section group footer">
+        <div class="col span_12_of_12" id="footer-container">
+            <ul id="footer-links">
+                <li><a href="#">Contact Me</a>
+                <li><a href="#">Facebook</a>
+                <li><a href="#">YouTube</a>
+                <li><a href="#">GitHub</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        if (!window.matchMedia("(max-width: 720px)").matches) {
+            $(document).scroll(function() {
+                var scroll = $(this).scrollTop();
+                if (scroll > 0) {
+                    $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+                }
+                else {
+                    $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+                }
+            });
+        }
+    });
+    
+    $(document).ready(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            $("#navbar").find("ul").css("background-color", "rgba(178, 42, 42, 1)");
+        }
+    });
+    
+    $(document).ready(function() {
+        $(window).on("load", function() {
+            $(".container").addClass("container-loaded");
+        });
+    });
+    
+</script>
+</body>
+</html>
