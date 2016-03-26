@@ -95,7 +95,40 @@
         </div>
     </div>
 </div>
-<script>// Fade in page    
+<script>
+    // Changes navbar color if scrolled down
+    $(document).ready(function() {
+        $(document).scroll(function() {
+            var scroll = $(this).scrollTop();
+            if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+                $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+            }
+            else {
+                $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+            }
+        });
+    });
+
+    // Changes navbar color on resize if not at top of page or if window is smaller than 720px
+    $(window).resize(function() {
+        var scroll = $(window).scrollTop();
+        if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+            $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+        }
+        else {
+            $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+        }
+    });
+    
+    // Changes navbar color if page loads in middle of page
+    $(document).ready(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+        }
+    });
+    
+    // Fade in page    
     $(document).ready(function() {
         $(window).on("load", function() {
             $(".container").addClass("container-loaded");
