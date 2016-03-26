@@ -162,6 +162,14 @@ body {
         
 }
 
+@media only screen and (max-width: 480px) {
+    .banner > div:after {padding-bottom: 70%;}
+    #title {
+        font-size: 36px;
+        bottom: 30%;
+    }
+}
+
 /* ----------------------------------------------------
    Main Icons
    ----------------------------------------------------*/
@@ -416,6 +424,12 @@ body {
     .button {transform: translate(-50%, 90px);}
 }
 
+@media only screen and (max-width: 480px) {
+    .content-header {transform: translate(-50%, 40%);}
+    .content-text {transform: translate(-50%, 40px); font-size: 12px;}
+    .button {transform: translate(-50%, 60px);}
+}
+
 /* ----------------------------------------------------
    Content-3
    ----------------------------------------------------*/
@@ -572,6 +586,11 @@ body {
 
 @media only screen and (max-width: 720px) {
     .subpage-banner:after {padding-bottom: 28%;}
+}
+
+@media only screen and (max-width: 480px) {
+    .subpage-banner:after {padding-bottom: 55%;}
+    .subpage-title {bottom: 15%;}
 }
 
 /* ----------------------------------------------------
