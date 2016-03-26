@@ -69,13 +69,13 @@
     </div>
 
     <div id="before-section">
-    <div class="section group horizontal-spacing">
-        <div class="col span_12_of_12"></div>
-    </div>
+        <div class="section group horizontal-spacing">
+            <div class="col span_12_of_12"></div>
+        </div>
 
-    <div class="section group horizontal-spacing">
-        <div class="col span_12_of_12"></div>
-    </div>
+        <div class="section group horizontal-spacing">
+            <div class="col span_12_of_12"></div>
+        </div>
     </div>
 
     <div class="section group content-wrapper" id="content-1">
@@ -153,20 +153,31 @@
     </div>
 </div>
 <script>
+    // Changes navbar color if scrolled down
     $(document).ready(function() {
-        if (!window.matchMedia("(max-width: 720px)").matches) {
-            $(document).scroll(function() {
-                var scroll = $(this).scrollTop();
-                if (scroll > 0) {
-                    $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
-                }
-                else {
-                    $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
-                }
-            });
-        }
+        $(document).scroll(function() {
+            var scroll = $(this).scrollTop();
+            if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+                $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
+            }
+            else {
+                $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+            }
+        });
     });
+
+    // Changes navbar color on resize if not at top of page or if window is smaller than 720px
+    $(window).resize(function() {
+        var scroll = $(window).scrollTop();
+        if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+            $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
+        }
+        else {
+            $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+        }
+    })
     
+    // Changes navbar color if page loads in middle of page
     $(document).ready(function() {
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
@@ -174,17 +185,18 @@
         }
     });
     
+    // Function for scrolling to an element
     var scrollToElement = function(id, speed) {
         var navbarHeight = $("nav").height();
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
     
+    // Fade in page
     $(document).ready(function() {
         $(window).on("load", function() {
             $(".container").addClass("container-loaded");
         });
     });
-    
 </script>
 </body>
 </html>

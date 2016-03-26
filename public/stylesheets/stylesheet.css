@@ -176,7 +176,10 @@ input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
 }
 
 @media only screen and (max-width: 1080px) {
+    .banner > div:after {padding-bottom: 30%;}
+    #title {font-size: 68px;}
     #title {bottom: 25%;}
+    #before-section div:first-child {display: none;}
 }
 
 @media only screen and (max-width: 720px) {
@@ -289,6 +292,11 @@ input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
 	.left-spacing, .midleft-spacing, .midright-spacing, .right-spacing {display: none;}
     .left-icon-container, .mid-icon-container, .right-icon-container {width: 33.33%;}
     #left-icon, #mid-icon, #right-icon {width: 50%;}
+    .left-icon-container #left-title, .mid-icon-container #mid-title, .right-icon-container #right-title {padding-top: 5px;}
+}
+
+@media only screen and (max-width: 480px) {
+    #left-icon, #mid-icon, #right-icon {margin: 2.5% auto; width: 95%;}
 }
 
 /* ----------------------------------------------------
@@ -428,7 +436,7 @@ input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
     display: table;
     left: 50%;
     transform: translate(-50%, 150px);
-    padding: 16px 25px;
+    padding: 16px 25px 16px 27px;
     font-size: 18px;
     font-family: "HelveticaNeueLT Std Thin", "Helvetica", Arial, sans-serif;
     text-decoration: none;
@@ -457,9 +465,6 @@ input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
     .content-header {transform: translate(-50%, 40%);}
     .content-text {transform: translate(-50%, 40px); font-size: 12px;}
     .button {transform: translate(-50%, 60px);}
-}
-
-@media only screen and (max-width: 480px) {
     #content-2 .color-fill {background-color: rgba(100, 40, 40, 0.7);}
 }
 
