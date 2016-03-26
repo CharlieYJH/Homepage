@@ -77,14 +77,40 @@ body {
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
-    font-face: "Helvetica", Arial, sans-serif;
+    font-family: "Helvetica", Arial, sans-serif;
     font-weight: 500;
     color: white;
     cursor: pointer;
 }
 
+.show-menu {
+    display: none;
+    padding: 14px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(26, 115, 28, 1);
+}
+
+input[type="checkbox"] {display: none;}
+
+input[type="checkbox"]:checked ~ ul {display: block;}
+
+input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
+
 @media only screen and (max-width: 720px) {
     .main-nav ul {background-color: rgba(26, 115, 28, 1);}
+}
+
+@media only screen and (max-width: 480px) {
+    .main-nav ul {padding: 0;}
+    .main-nav ul li {display: block;}
+    .main-nav ul li, .main-nav ul a {width: 100%;}
+    .main-nav ul a {padding: 14px 0;}
+    .show-menu {display: block;}
+    .main-nav ul {display: none;}
 }
 
 /* ----------------------------------------------------
@@ -166,10 +192,10 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-    .banner > div:after {padding-bottom: 70%;}
+    .banner > div:after {padding-bottom: 50%;}
     #title {
         font-size: 36px;
-        bottom: 30%;
+        bottom: 25%;
     }
 }
 
@@ -433,6 +459,10 @@ body {
     .button {transform: translate(-50%, 60px);}
 }
 
+@media only screen and (max-width: 480px) {
+    #content-2 .color-fill {background-color: rgba(100, 40, 40, 0.7);}
+}
+
 /* ----------------------------------------------------
    Content-3
    ----------------------------------------------------*/
@@ -460,6 +490,10 @@ body {
 
 #content-3 .button:hover {
     background-color: #1aa617;
+}
+
+@media only screen and (max-width: 480px) {
+    #content-3 .color-fill {background-color: rgba(45, 87, 37, 0.7);}
 }
 
 /* ----------------------------------------------------
@@ -544,6 +578,10 @@ body {
     #gallery .main-nav ul {background-color: rgb(178, 42, 42);}
 }
 
+#gallery .show-menu {background-color: rgb(178, 42, 42);}
+
+#gallery input[type="checkbox"]:checked + .show-menu {background-color: #801515;}
+
 #gallery .footer {background-color: rgb(178, 42, 42);}
     
 /* ----------------------------------------------------
@@ -592,8 +630,8 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-    .subpage-banner:after {padding-bottom: 55%;}
-    .subpage-title {bottom: 15%;}
+    .subpage-banner:after {padding-bottom: 50%;}
+    .subpage-title {bottom: 20%;}
 }
 
 /* ----------------------------------------------------
@@ -654,6 +692,10 @@ body {
 @media only screen and (max-width: 1280px) {
     #gallery-section {width: 100%;}
     .img-box {width: 24%; margin: 0.5%;}
+}
+
+@media only screen and (max-width: 480px) {
+    .img-box {width: 32.3333%; margin: 0.5%;}
 }
 
 /* ----------------------------------------------------
