@@ -56,6 +56,7 @@ body {
     padding: 0 0 0 2%;
     list-style-type: none;
     background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
     overflow: hidden;
 }
 
@@ -84,29 +85,24 @@ body {
 
 .show-menu {
     display: none;
+    width: 100%;
     padding: 14px 0;
-    text-align: center;
+    padding-left: 2%;
     text-decoration: none;
     font-family: "Helvetica", Arial, sans-serif;
     font-weight: 500;
     color: white;
     background-color: rgba(26, 115, 28, 1);
+    cursor: pointer;
 }
-
-input[type="checkbox"] {display: none;}
-
-input[type="checkbox"]:checked ~ ul {display: block;}
-
-input[type="checkbox"]:checked + .show-menu {background-color: #09490b;}
 
 @media only screen and (max-width: 720px) {
     .main-nav ul {background-color: rgba(26, 115, 28, 1);}
 }
 
 @media only screen and (max-width: 480px) {
-    .main-nav ul {padding: 0;}
-    .main-nav ul li {display: block;}
-    .main-nav ul li, .main-nav ul a {width: 100%;}
+    .main-nav ul {padding: 0; transition: none;}
+    .main-nav ul li {display: block; padding-left: 2%;}
     .main-nav ul a {padding: 14px 0;}
     .show-menu {display: block;}
     .main-nav ul {display: none;}

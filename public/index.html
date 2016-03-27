@@ -23,8 +23,7 @@
 <div class="wrapper">
     <div class="section group main-nav" id="navbar">
         <nav class="col span_12_of_12">
-            <input type="checkbox" id="show-menu" role="button">
-            <label for="show-menu" class="show-menu">Menu</label>
+            <a class="show-menu">Menu</a>
             <ul>
                 <li><a onclick="scrollToElement('body', 500)">Home</a>
                 <li><a onclick="scrollToElement('#content-1', 500)">About Me</a>
@@ -158,7 +157,8 @@
     $(document).ready(function() {
         $(document).scroll(function() {
             var scroll = $(this).scrollTop();
-            if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+            var width = $(window).width();
+            if (width <= 720 || scroll > 0) {
                 $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
             }
             else {
@@ -168,13 +168,19 @@
     });
 
     // Changes navbar color on resize if not at top of page or if window is smaller than 720px
+    // Shows menu properly switching from small screen to big screen
     $(window).resize(function() {
         var scroll = $(window).scrollTop();
-        if (window.matchMedia("(max-width: 720px)").matches || scroll > 0) {
+        var width = $(window).width();
+        if (width <= 720 || scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
         }
         else {
             $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+        }
+
+        if (width > 480 && $(".main-nav ul").is(":hidden")) {
+            $(".main-nav ul").removeAttr("style");
         }
     });
     
@@ -192,10 +198,11 @@
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
 
-    // $(window).click(function(e) {
-    //     e.preventDefault();
-    //     $(".main-nav ul").slideToggle();
-    // });
+    // Show full menu when clicking menu
+    $(".show-menu").click(function(e) {
+        e.preventDefault();
+        $(".main-nav ul").slideToggle();
+    });
     
     // Fade in page
     $(document).ready(function() {
