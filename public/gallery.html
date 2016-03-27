@@ -135,10 +135,16 @@
         }
     });
 
-    // Show full menu when clicking menu
+    // Show full menu when clicking menu and changes menu button color
     $(".show-menu").click(function(e) {
         e.preventDefault();
         $(".main-nav ul").slideToggle();
+        if ($(".main-nav ul").height() <= 1) {
+            $(".show-menu").css("background-color", "#591515");
+        }
+        else {
+            $(".show-menu").css("background-color", "rgb(178, 42, 42)");
+        }
     });
 
     // Fade in page    

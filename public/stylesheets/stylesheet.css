@@ -102,8 +102,8 @@ body {
 
 @media only screen and (max-width: 480px) {
     .main-nav ul {padding: 0; transition: none;}
-    .main-nav ul li {display: block; padding-left: 2%;}
-    .main-nav ul a {padding: 14px 0;}
+    .main-nav ul li {display: block; padding-left: 2%; border-top: 0.1px solid rgba(255, 255, 255, 0.05);}
+    .main-nav ul a {padding: 14px 0; width: 100%;}
     .show-menu {display: block;}
     .main-nav ul {display: none;}
 }

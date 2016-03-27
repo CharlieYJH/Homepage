@@ -172,6 +172,7 @@
     $(window).resize(function() {
         var scroll = $(window).scrollTop();
         var width = $(window).width();
+        console.log(width);
         if (width <= 720 || scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
         }
@@ -198,10 +199,16 @@
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
 
-    // Show full menu when clicking menu
+    // Show full menu when clicking menu and changes menu button color
     $(".show-menu").click(function(e) {
         e.preventDefault();
         $(".main-nav ul").slideToggle();
+        if ($(".main-nav ul").height() <= 1) {
+            $(".show-menu").css("background-color", "#0d390e");
+        }
+        else {
+            $(".show-menu").css("background-color", "rgba(26, 115, 28, 1)");
+        }
     });
     
     // Fade in page
