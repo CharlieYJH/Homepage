@@ -55,7 +55,6 @@ body {
     margin: 0;
     padding: 0 0 0 2%;
     list-style-type: none;
-    transition: 0.2s;
     background-color: rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
