@@ -31,7 +31,6 @@ $(document).ready(function() {
 var getImage = function(element) {
     var img = new Image();
     img.src = $(element).attr("data-image");
-    console.log(img.src);
     return img;
 }
 
