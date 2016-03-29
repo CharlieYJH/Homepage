@@ -27,13 +27,15 @@ $(document).ready(function() {
     });
 });
 
+// Get image source
 var getImage = function(element) {
-    var url = $(element).css("background-image");
     var img = new Image();
-    img.src = /^url\(\"(.*)\"\)$/.exec(url)[1];
+    img.src = $(element).attr("data-image");
+    console.log(img.src);
     return img;
 }
 
+// Displays image to screen
 var showImage = function(img) {
     var imgContainer = $(".img-big-container");
     var imgDiv = $(".img-big-container").find("img");
