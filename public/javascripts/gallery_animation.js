@@ -1,3 +1,4 @@
+// Show enlarged image when thumbnail is clicked
 $(document).ready(function() {
     $(".img-box .image").click(function() {
         var img = getImage(this);
@@ -7,6 +8,7 @@ $(document).ready(function() {
     }); 
 });
 
+// Hide enlarged image when clicking somewhere on the screen
 $(document).ready(function() {
     $(".img-display").click(function() {
         $(".img-display").css({"opacity": "0", "z-index": "-1"});
@@ -14,6 +16,7 @@ $(document).ready(function() {
     });
 });
 
+// Listener for resizing: Make the enlarged image resize with the screen
 $(document).ready(function() {
     $(window).resize(function() {
         if ($(".img-display").css("opacity") == 0) {
