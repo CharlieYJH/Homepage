@@ -38,6 +38,11 @@ body {
     src: url("../fonts/HelveticaNeueLTStd-Th.otf");
 }
 
+/* Very hacked fix for mobile device click detection */
+@media only screen and (max-width: 480px) {
+    html {cursor: pointer;}
+}
+
 /* To view layout */
 /* {box-shadow: inset 1px 1px 1px 1px;}
 
@@ -85,9 +90,10 @@ body {
 
 .show-menu {
     display: none;
+    position: relative;
     width: 100%;
     padding: 14px 0;
-    padding-left: 2%;
+    padding-left: 5%;
     text-decoration: none;
     font-family: "Helvetica", Arial, sans-serif;
     font-weight: 500;
@@ -96,13 +102,27 @@ body {
     cursor: pointer;
 }
 
+.show-menu:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../images/index/menu-icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media only screen and (max-width: 720px) {
     .main-nav ul {background-color: rgba(26, 115, 28, 1);}
 }
 
 @media only screen and (max-width: 480px) {
     .main-nav ul {padding: 0; transition: none;}
-    .main-nav ul li {display: block; padding-left: 2%; border-top: 0.1px solid rgba(255, 255, 255, 0.05);}
+    .main-nav ul li {display: block; padding-left: 2%; border-top: 1px solid rgba(255, 255, 255, 0.05);}
     .main-nav ul a {padding: 14px 0; width: 100%;}
     .show-menu {display: block;}
     .main-nav ul {display: none;}

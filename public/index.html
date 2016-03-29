@@ -172,7 +172,6 @@
     $(window).resize(function() {
         var scroll = $(window).scrollTop();
         var width = $(window).width();
-        console.log(width);
         if (width <= 720 || scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
         }
@@ -195,19 +194,32 @@
     
     // Function for scrolling to an element
     var scrollToElement = function(id, speed) {
-        var navbarHeight = $("nav").height();
+        var navbarHeight = ($(window).width() <= 480)
+                         ? $(".show-menu").height() + 2*parseInt($(".show-menu").css("padding-top"))
+                         : $(".main-nav ul").height();
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
 
     // Show full menu when clicking menu and changes menu button color
     $(".show-menu").click(function(e) {
         e.preventDefault();
-        $(".main-nav ul").slideToggle();
+        $(".main-nav ul").slideToggle(200);
         if ($(".main-nav ul").height() <= 1) {
             $(".show-menu").css("background-color", "#0d390e");
         }
         else {
             $(".show-menu").css("background-color", "rgba(26, 115, 28, 1)");
+        }
+    });
+
+    // Hide menu when somewhere else on screen is clicked
+    $(document).click(function(event) {
+        if (!$(event.target).is(".show-menu")) {
+            console.log($(".show-menu").css("background-color"));
+            if(!$(".main-nav ul").is(":hidden") && $(window).width() <= 480) {
+                $(".main-nav ul").slideUp(200);
+                $(".show-menu").css("background-color", "rgba(26, 115, 28, 1)");
+            }
         }
     });
     
