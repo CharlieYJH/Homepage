@@ -35,7 +35,8 @@ body {
 @font-face
 {
     font-family: "HelveticaNeueLT Std Thin";
-    src: url("../fonts/HelveticaNeueLTStd-Th.otf");
+    src: url("../fonts/HelveticaNeueLTStd-Th.otf"),
+         url("../fonts/HelveticaNeue-Thin.ttf") format("truetype");
 }
 
 /* Very hacked fix for mobile device click detection */
