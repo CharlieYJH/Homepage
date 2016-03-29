@@ -4,7 +4,7 @@ $(document).ready(function() {
         var img = getImage(this);
         showImage(img);
         $(".img-display").css({"opacity": "1", "z-index": "10"});
-        $("#navbar").css("opacity", "0");
+        $("nav").css("opacity", "0");
     }); 
 });
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".img-display").click(function() {
         $(".img-display").css({"opacity": "0", "z-index": "-1"});
-        $("#navbar").css("opacity", "1");
+        $("nav").css("opacity", "1");
     });
 });
 
