@@ -179,8 +179,9 @@
             $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
         }
 
-        if (width > 480 && $(".main-nav ul").is(":hidden")) {
+        if (width > 480) {
             $(".main-nav ul").removeAttr("style");
+            $(".show-menu").css("background-color", "rgba(26, 115, 28, 1)");
         }
     });
     
