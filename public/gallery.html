@@ -169,7 +169,7 @@
 
     // Hide menu when somewhere else on screen is clicked
     $(document).click(function(event) {
-        if (!$(event.target).is(".show-menu")) {
+        if (!$(event.target).is(".show-menu") && !$(event.target).is(".show-menu p")) {
             if(!$(".main-nav ul").is(":hidden") && $(window).width() <= 480) {
                 $(".main-nav ul").slideUp(200);
                 $(".show-menu").css("background-color", "rgb(178, 42, 42)");
