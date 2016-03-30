@@ -741,6 +741,7 @@ body {
 
 .img-big-container {
     position: relative;
+    display: block;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -749,9 +750,30 @@ body {
 
 .img-big-container img {
     position: relative;
-    display: block;
+    display: inline-block;
     -moz-user-select: none;
     user-select: none;
+}
+
+.img-nav {
+    position: absolute;
+    display: table;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    .img-nav {width: 30px; height: 30px;}
 }
 
 /* {

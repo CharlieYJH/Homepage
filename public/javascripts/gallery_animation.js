@@ -5,6 +5,7 @@ $(document).ready(function() {
         showImage(img);
         $(".img-display").css({"opacity": "1", "z-index": "10"});
         $("nav").css("opacity", "0");
+        $("nav").hide();
     }); 
 });
 
@@ -13,6 +14,7 @@ $(document).ready(function() {
     $(".img-display").click(function() {
         $(".img-display").css({"opacity": "0", "z-index": "-1"});
         $("nav").css("opacity", "1");
+        $("nav").show();
     });
 });
 
@@ -41,16 +43,22 @@ var getImage = function(element) {
 var showImage = function(img) {
     var imgContainer = $(".img-big-container");
     var imgDiv = $(".img-big-container").find("img");
+    var leftButton = $("#left-nav");
+    var rightButton = $("#right-nav");
     var scale = 1;
+    var buttonGap = 10;
     
     imgContainer.css({"width": "", "height": "", "max-width": "", "max-height": ""});
     imgDiv.removeAttr("src");
     
-    while(scale * img.height > 0.95 * $("body").height() || scale * img.width > 0.95 * $("body").width()) {
+    while(scale * img.height > 0.95 * $("body").height() || scale * img.width + 2*(leftButton.width() + buttonGap) > 0.95 * $("body").width()) {
         scale -= 0.05;
     }
 
     imgContainer.css({"height": scale * img.height, "width": scale * img.width});
     imgDiv.attr("src", img.src);
     imgDiv.css("max-width", "100%");
+
+    leftButton.css({"left": imgContainer.offset().left - leftButton.width() - buttonGap});
+    rightButton.css({"left": imgContainer.offset().left + imgContainer.width() + buttonGap})
 }

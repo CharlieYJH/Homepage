@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <style>
     .container {
         opacity: 0;
@@ -155,6 +154,9 @@
         </div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 <script>
 
     // Changes navbar color if scrolled down
@@ -184,7 +186,7 @@
         }
 
         if (width > 480) {
-            $(".main-nav ul").removeAttr("style");
+            $(".main-nav ul").css("display", "");
             $(".show-menu").css("background-color", "rgba(26, 115, 28, 1)");
         }
     });
