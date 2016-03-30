@@ -93,25 +93,42 @@ body {
     display: none;
     position: relative;
     width: 100%;
-    padding: 14px 0;
-    padding-left: 5%;
-    text-decoration: none;
-    font-family: "Helvetica", Arial, sans-serif;
-    font-weight: 500;
-    color: white;
+    padding: 10px 0;
     background-color: rgba(26, 115, 28, 1);
     cursor: pointer;
 }
 
-.show-menu:after {
+.show-menu p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: 500;
+    color: white;
+    vertical-align: middle;
+}
+
+/*.show-menu:before {
     content: "";
     display: inline-block;
     position: absolute;
     width: 30px;
     height: 30px;
-    right: 10%;
     top: 50%;
     transform: translateY(-50%);
+    background-image: url("../images/index/menu-icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+.show-menu:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
     background-image: url("../images/index/menu-icon.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +142,7 @@ body {
     .main-nav ul {padding: 0; transition: none;}
     .main-nav ul li {display: block; padding-left: 2%; border-top: 1px solid rgba(255, 255, 255, 0.1);}
     .main-nav ul a {padding: 14px 0; width: 100%;}
-    .show-menu {display: block;}
+    .show-menu {display: table;}
     .main-nav ul {display: none;}
 }
 
