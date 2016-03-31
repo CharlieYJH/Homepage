@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Charlie Yin | Home</title>
+  <title>Home | Charile Yin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
@@ -234,6 +234,27 @@
         $(window).on("load", function() {
             $(".container").addClass("container-loaded");
         });
+    });
+
+    // Remove hover effects from stylesheet if it's a touch device (Hoping to find better solution)
+    $(document).ready(function() {
+        if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+
+            var styles = document.styleSheets[1];
+            var toDelete = [];
+            var deleted = 0;
+
+            for (var i = 0; i < styles.cssRules.length; i++) {
+                if (styles.cssRules[i].selectorText && /:hover\b/.test(styles.cssRules[i].selectorText)) {
+                    toDelete.push(i);
+                }
+            }
+
+            for (var i = 0; i < toDelete.length; i++) {
+                styles.deleteRule(toDelete[i] - deleted);
+                deleted++;
+            }
+        }
     });
     
 </script>
