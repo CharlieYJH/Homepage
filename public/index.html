@@ -162,8 +162,10 @@
     // Changes navbar color if scrolled down
     $(document).ready(function() {
         $(document).scroll(function() {
+
             var scroll = $(this).scrollTop();
             var width = $(window).width();
+
             if (width <= 720 || scroll > 0) {
                 $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
             }
@@ -176,8 +178,10 @@
     // Changes navbar color on resize if not at top of page or if window is smaller than 720px
     // Shows menu properly switching from small screen to big screen
     $(window).resize(function() {
+
         var scroll = $(window).scrollTop();
         var width = $(window).width();
+
         if (width <= 720 || scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
         }
@@ -193,7 +197,9 @@
     
     // Changes navbar color if page loads in middle of page
     $(document).ready(function() {
+
         var scroll = $(window).scrollTop();
+
         if (scroll > 0) {
             $("#navbar").find("ul").css("background-color", "rgba(26, 115, 28, 1)");
         }
@@ -201,16 +207,20 @@
     
     // Function for scrolling to an element
     var scrollToElement = function(id, speed) {
+
         var navbarHeight = ($(window).width() <= 480)
                          ? $(".show-menu").height() + 2*parseInt($(".show-menu").css("padding-top"))
                          : $(".main-nav ul").height();
+
         $("html, body").animate({scrollTop: $(id).offset().top - navbarHeight + 1}, speed);
     }
 
     // Show full menu when clicking menu and changes menu button color
     $(".show-menu").click(function(e) {
+
         e.preventDefault();
         $(".main-nav ul").slideToggle(200);
+
         if ($(".main-nav ul").height() <= 1) {
             $(".show-menu").css("background-color", "#0d390e");
         }
@@ -241,9 +251,7 @@
         if ("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
 
             var styles = document.styleSheets[1];
-            var toDelete = [];
-            var deleted = 0;
-
+            
             for (var i = styles.cssRules.length - 1; i >= 0; i--) {
                 if (styles.cssRules[i].selectorText && /:hover\b/.test(styles.cssRules[i].selectorText)) {
                     styles.deleteRule(i);

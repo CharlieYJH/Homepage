@@ -1,8 +1,11 @@
 // Show enlarged image when thumbnail is clicked
 $(document).ready(function() {
     $(".img-box .image").click(function() {
+
         var img = getImage(this);
+
         showImage(img);
+
         $(".img-display").css({"opacity": "1", "z-index": "10"});
         $("nav").css("opacity", "0");
         $("nav").hide();
@@ -41,6 +44,7 @@ var getImage = function(element) {
 
 // Displays image to screen
 var showImage = function(img) {
+    
     var imgContainer = $(".img-big-container");
     var imgDiv = $(".img-big-container").find("img");
     var leftButton = $("#left-nav");
