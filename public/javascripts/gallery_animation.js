@@ -1,15 +1,18 @@
 // Show enlarged image when thumbnail is clicked
+// Only for non-touch devices
 $(document).ready(function() {
-    $(".img-box .image").click(function() {
+    if (!("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0)) {
+        $(".img-box .image").click(function() {
 
-        var img = getImage(this);
+            var img = getImage(this);
 
-        showImage(img);
+            showImage(img);
 
-        $(".img-display").css({"opacity": "1", "z-index": "10"});
-        $("nav").css("opacity", "0");
-        $("nav").hide();
-    }); 
+            $(".img-display").css({"opacity": "1", "z-index": "10"});
+            $("nav").css("opacity", "0");
+            $("nav").hide();
+        });
+    }
 });
 
 // Hide enlarged image when clicking somewhere on the screen

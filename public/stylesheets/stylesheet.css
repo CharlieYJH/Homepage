@@ -389,7 +389,7 @@ body {
 }
 
 #content-1 .img-container {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(234, 234, 234, 0.5) 80%, rgba(234, 234, 234, 1) 100%), url("../images/index/Profile.png");
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(234, 234, 234, 0.5) 80%, rgba(234, 234, 234, 1) 100%), url("../images/index/Profile.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -411,7 +411,7 @@ body {
    ----------------------------------------------------*/
    
 #content-2 {
-    background-image: url("../images/index/content-2_bg.png");
+    background-image: url("../images/index/content-2_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -618,7 +618,7 @@ body {
 .subpage-banner {
     position: relative;
     width: 100%;
-    background-image: url("../images/gallery/gallery-banner.png");
+    background-image: url("../images/gallery/gallery-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

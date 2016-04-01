@@ -98,6 +98,17 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    // Image directs to another page when clicked on in touch devices
+    if ("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
+        $(".preload").empty();
+        $(".image").wrap(function() {
+            return "<a href=" + $(this).attr("data-image") + "></a>";
+        });
+    }
+</script>
+
 <div class="preload">
    <img src="./images/gallery/01.png" width="1" height="1"></img>
    <img src="./images/gallery/02.png" width="1" height="1"></img>
@@ -113,9 +124,7 @@
    <img src="./images/gallery/12.png" width="1" height="1"></img>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="./javascripts/gallery_animation.js"></script>
-
 <script>
 
     // Changes navbar color if scrolled down
