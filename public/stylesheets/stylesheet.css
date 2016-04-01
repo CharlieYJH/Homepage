@@ -599,8 +599,6 @@ body {
 /* To view layout */    
 /* #gallery * {box-shadow: inset 1px 1px 1px 1px;} */
 
-.preload {display: none;}
-
 @media only screen and (max-width: 720px) {
     #gallery .main-nav ul {background-color: rgb(178, 42, 42);}
 }

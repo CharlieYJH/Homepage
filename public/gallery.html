@@ -106,23 +106,30 @@
             return "<a href=" + $(this).attr("data-image") + "></a>";
         });
     }
+    // Else if it's non-touch device, preload the images
+    else {
+        var preload = function() {
+            var image = [];
+            for (var i = 0; i < arguments.length; i++) {
+                image[i] = new Image();
+                image[i].src = preload.arguments[i];
+            }
+        }
+
+        preload("./images/gallery/01.png",
+                "./images/gallery/02.png",
+                "./images/gallery/03.png",
+                "./images/gallery/04.png",
+                "./images/gallery/05.png",
+                "./images/gallery/06.png",
+                "./images/gallery/07.png",
+                "./images/gallery/08.png",
+                "./images/gallery/09.png",
+                "./images/gallery/10.png",
+                "./images/gallery/11.png",
+                "./images/gallery/12.png");
+    }
 </script>
-
-<div class="preload">
-   <img src="./images/gallery/01.png" width="1" height="1"></img>
-   <img src="./images/gallery/02.png" width="1" height="1"></img>
-   <img src="./images/gallery/03.png" width="1" height="1"></img>
-   <img src="./images/gallery/04.png" width="1" height="1"></img>
-   <img src="./images/gallery/05.png" width="1" height="1"></img>
-   <img src="./images/gallery/06.png" width="1" height="1"></img>
-   <img src="./images/gallery/07.png" width="1" height="1"></img>
-   <img src="./images/gallery/08.png" width="1" height="1"></img>
-   <img src="./images/gallery/09.png" width="1" height="1"></img>
-   <img src="./images/gallery/10.png" width="1" height="1"></img>
-   <img src="./images/gallery/11.png" width="1" height="1"></img>
-   <img src="./images/gallery/12.png" width="1" height="1"></img>
-</div>
-
 <script src="./javascripts/gallery_animation.js"></script>
 <script>
 
