@@ -33,8 +33,8 @@
     </div>
 
     <div class="img-display">
-        <div class="img-nav" id="left-nav"><div style="display: table-cell; vertical-align: middle;"><div>&lt;</div></div></div>
-        <div class="img-nav" id="right-nav"><div style="display: table-cell; vertical-align: middle;"><div>&gt;</div></div></div>
+        <div class="img-nav" id="left-nav" style="background-image: url('./images/gallery/nav-arrow-left.png')"></div>
+        <div class="img-nav" id="right-nav" style="background-image: url('./images/gallery/nav-arrow-right.png')"></div>
         <div class="img-big-container">
             <img></img>
         </div>
@@ -98,6 +98,8 @@
     </div>
 </div>
 
+<div id="preload"></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
     // Image directs to another page when clicked on in touch devices
@@ -110,9 +112,9 @@
     else {
         var preload = function() {
             var image = [];
+            var loadbox = $("#preload");
             for (var i = 0; i < arguments.length; i++) {
-                image[i] = new Image();
-                image[i].src = preload.arguments[i];
+                loadbox.append("<img src=" + preload.arguments[i] + "></img");
             }
         }
 

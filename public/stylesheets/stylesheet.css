@@ -756,23 +756,22 @@ body {
 .img-nav {
     position: absolute;
     display: table;
-    color: white;
-    text-align: center;
-    font-size: 28px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    border-radius: 100%;
     cursor: pointer;
 }
 
 @media only screen and (max-width: 480px) {
     .img-nav {width: 30px; height: 30px;}
 }
+
+#preload {display: none;}
 
 /* {
   background: #000 !important;
