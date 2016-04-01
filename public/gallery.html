@@ -102,7 +102,6 @@
 <script>
     // Image directs to another page when clicked on in touch devices
     if ("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
-        $(".preload").empty();
         $(".image").wrap(function() {
             return "<a href=" + $(this).attr("data-image") + "></a>";
         });

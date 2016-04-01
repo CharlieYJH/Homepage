@@ -10,6 +10,14 @@ var users = require('./routes/users');
 
 var app = express();
 
+// Redirect http requests to https
+app.use('/', function(req, res, next) {
+  if (req.secure) {
+    return next();
+  }
+  res.redirect('https://' + req.hostname + ':' + 3000 + req.url);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
