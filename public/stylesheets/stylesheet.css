@@ -74,7 +74,9 @@ body {
 
 /* Set hover colour */
 .main-nav li:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px -5px rgba(247, 247, 247, 1);
+    -webkit-box-shadow: inset 0px -5px rgba(247, 247, 247, 1);
+    box-shadow: inset 0px -5px rgba(247, 247, 247, 1);
 }
 
 /* Make links inline blocks and pad */
@@ -87,6 +89,26 @@ body {
     font-weight: 500;
     color: white;
     cursor: pointer;
+    transition: 0.15s;
+}
+
+.scrolled ul {
+    background-color: rgba(247, 247, 247, 1);
+    box-shadow: 0 -9px 6px 5px;
+}
+
+.scrolled li a {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.scrolled li:hover {
+    -moz-box-shadow: inset 0px -5px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: inset 0px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px -5px rgba(0, 0, 0, 0.6);
+}
+
+.scrolled li:hover a {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .show-menu {
@@ -94,7 +116,7 @@ body {
     position: relative;
     width: 100%;
     padding: 10px 0;
-    background-color: rgba(26, 115, 28, 1);
+    background-color: rgba(247, 247, 247, 1);
     cursor: pointer;
 }
 
@@ -119,10 +141,6 @@ body {
     background-image: url("../images/index/menu-icon.png");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-@media only screen and (max-width: 720px) {
-    .main-nav ul {background-color: rgba(26, 115, 28, 1);}
 }
 
 @media only screen and (max-width: 480px) {
@@ -559,7 +577,7 @@ body {
     width: 100%;
     height: 50px;
     bottom: 0;
-    background-color: rgba(26, 115, 28, 1);
+    background-color: rgb(230, 230, 230);
     text-align: center;
 }
 
@@ -569,20 +587,24 @@ body {
 }
 
 #footer-links {
+    position: relative;
     padding: 0;
     margin: 0;
     height: 100%;
 }
 
 #footer-links li {
+    position: relative;
     display: inline-block;
-    padding: 14px 16px;
-    margin: 0;
+    padding: 0 8px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #footer-links li > a {
     display: block;
-    color: white;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
     text-decoration: none;
 }
 
@@ -598,16 +620,6 @@ body {
     
 /* To view layout */    
 /* #gallery * {box-shadow: inset 1px 1px 1px 1px;} */
-
-@media only screen and (max-width: 720px) {
-    #gallery .main-nav ul {background-color: rgb(178, 42, 42);}
-}
-
-#gallery .show-menu {background-color: rgb(178, 42, 42);}
-
-#gallery input[type="checkbox"]:checked + .show-menu {background-color: #801515;}
-
-#gallery .footer {background-color: rgb(178, 42, 42);}
     
 /* ----------------------------------------------------
    Page heading
@@ -755,7 +767,8 @@ body {
 
 .img-nav {
     position: absolute;
-    display: table;
+    z-index: 20;
+    opacity: 0.2;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -765,6 +778,11 @@ body {
     margin: 0;
     padding: 0;
     cursor: pointer;
+    transition: 0.1s;
+}
+
+.img-nav:hover {
+    opacity: 0.6;
 }
 
 @media only screen and (max-width: 480px) {

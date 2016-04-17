@@ -134,50 +134,43 @@
 </script>
 <script src="./javascripts/gallery_animation.js"></script>
 <script>
-
     // Changes navbar color if scrolled down
     $(document).ready(function() {
         $(document).scroll(function() {
 
-            var scroll = $(this).scrollTop();
-            var width = $(window).width();
-            
-            if (width <= 720 || scroll > 0) {
-                $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+            if ($(window).scrollTop() > 0 || $(window).width() <= 480) {
+                $("#navbar").addClass("scrolled");
             }
             else {
-                $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+                $("#navbar").removeClass("scrolled");
             }
         });
     });
 
-    // Changes navbar color on resize if not at top of page or if window is smaller than 720px
-    // Shows menu properly switching from small screen to big screen
+    // Changes navbar color on resize if not at top of page
     $(window).resize(function() {
 
-        var scroll = $(window).scrollTop();
         var width = $(window).width();
 
-        if (width <= 720 || scroll > 0) {
-            $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+        if ($(window).scrollTop() || width <= 480) {
+            $("#navbar").addClass("scrolled");
         }
         else {
-            $("#navbar").find("ul").css("background-color", "rgba(0, 0, 0, 0.3)");
+            $("#navbar").removeClass("scrolled");
         }
 
+        // Shows menu properly switching from small screen to big screen (menu resets to hidden in mobile)
         if (width > 480) {
             $(".main-nav ul").css("display", "");
-            $(".show-menu").css("background-color", "rgb(178, 42, 42)");
+            $(".show-menu").css("background-color", "rgba(247, 247, 247, 1)");
         }
     });
     
     // Changes navbar color if page loads in middle of page
     $(document).ready(function() {
 
-        var scroll = $(window).scrollTop();
-
-        if (scroll > 0) {
-            $("#navbar").find("ul").css("background-color", "rgb(178, 42, 42)");
+        if ($(window).scrollTop() > 0 || $(window).width() <= 480) {
+            $("#navbar").addClass("scrolled");
         }
     });
 
@@ -188,10 +181,11 @@
         $(".main-nav ul").slideToggle(200);
 
         if ($(".main-nav ul").height() <= 1) {
-            $(".show-menu").css("background-color", "#591515");
+            $(".show-menu").css("background-color", "rgb(200, 200, 200)");
         }
         else {
-            $(".show-menu").css("background-color", "rgb(178, 42, 42)");
+            $(".show-menu").css("background-color", "rgba(247, 247, 247, 1)");
+            $("#navbar").find("a").css("color", "rgba(0, 0, 0, 0.4)");
         }
     });
 
@@ -200,12 +194,12 @@
         if (!$(event.target).is(".show-menu") && !$(event.target).is(".show-menu p")) {
             if(!$(".main-nav ul").is(":hidden") && $(window).width() <= 480) {
                 $(".main-nav ul").slideUp(200);
-                $(".show-menu").css("background-color", "rgb(178, 42, 42)");
+                $(".show-menu").css("background-color", "rgba(247, 247, 247, 1)");
             }
         }
     });
-
-    // Fade in page    
+    
+    // Fade in page
     $(document).ready(function() {
         $(window).on("load", function() {
             $(".container").addClass("container-loaded");
@@ -217,15 +211,14 @@
         if ("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
 
             var styles = document.styleSheets[1];
-
+            
             for (var i = styles.cssRules.length - 1; i >= 0; i--) {
                 if (styles.cssRules[i].selectorText && /:hover\b/.test(styles.cssRules[i].selectorText)) {
                     styles.deleteRule(i);
                 }
             }
         }
-    });
-    
+    });   
 </script>
 </body>
 </html>

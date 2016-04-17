@@ -3,11 +3,8 @@
 $(document).ready(function() {
     if (!("ontouchstart" in window || window.navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0)) {
         $(".img-box .image").click(function() {
-
             var img = getImage(this);
-
             showImage(img);
-
             $(".img-display").css({"opacity": "1", "z-index": "10"});
             $("nav").css("opacity", "0");
             $("nav").hide();
@@ -17,10 +14,10 @@ $(document).ready(function() {
 
 // Hide enlarged image when clicking somewhere on the screen
 $(document).ready(function() {
-    $(".img-display").click(function() {
+    $(".img-display").click(function(event) {
         $(".img-display").css({"opacity": "0", "z-index": "-1"});
-        $("nav").css("opacity", "1");
         $("nav").show();
+        $("nav").css("opacity", "1");
     });
 });
 
