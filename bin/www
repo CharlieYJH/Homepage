@@ -6,30 +6,20 @@
 
 var app = require('../app');
 var debug = require('debug')('homepage:server');
-var https = require('https');
 var http = require('http');
-var read = require('fs').readFileSync;
 
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
-var httpPort = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = https.createServer({
-  key: read('./ssl/ca.key', 'utf8'),
-  cert: read('./ssl/ca.crt', 'utf8'),
-  passphrase: "test",
-  ca: [read('./ssl/ia.crt', 'utf8')]
-}, app);
-
-var httpServer = http.createServer(app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -38,10 +28,6 @@ var httpServer = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
-httpServer.listen(httpPort);
-httpServer.on('error', onError);
-httpServer.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
